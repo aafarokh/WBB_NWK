@@ -15,13 +15,13 @@ The information of each recording is gathered in a metadata file as a sheet, suc
 This is a part of the metadata file:
  ![metadata](https://user-images.githubusercontent.com/39968388/114931931-308f0000-9e37-11eb-83d5-0162aee3c591.png)
 
-The columns in the metadata file are explained in the order below:
+The columns in the metadata file are explained in the original written order as below:
 
-FileName
+FileName : The new file name given to the old signal in the format PIDxxxx_SIDxxxxx, e.g. PID0047_SID00446
 
-PatientID
+PatientID : The unique ID for each patient that is chosed arbitrarily, howver remains the same through the whole data bank, e.g. PID0032
 
-SignalID
+SignalID : The unique ID of each signal, e.g. SID00129
 
 SourceFile
 
