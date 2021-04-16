@@ -189,5 +189,5 @@ GainEstimator.m reads the metadata file and wherever that the gain was not given
 There where some files in the data base with no given Fs and since this property is essential for any kind of data analysis, one might want to keep only the signals with given Fs. The other essnetial property of the signal that is required for data analysis is the SignalType, which indicates if it is LFP, EEG or any other type of biosignals.
 
 In this regard, FileCleaner.m reads the metadata file, identifies those files that have at least both Fs and SignalType reported and save them in a new folder called Clean.
-
+The corresponding .json files will be saved in the new folder as well.
 
