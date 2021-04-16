@@ -8,8 +8,6 @@ The matlab codes are applied on part of the WebBioBank (WBB) developed by Newron
 
 A unique pateint ID (PID) is given to each patient name. Each signal is labeled by a signal ID (SID) that is unique. At the end, each old file is named by combining PID and SID so that the new file name is in the format of PIDxxxx_SIDxxxxx where x is an integer. 
 
-The objective of this data management is to read the old files in the data base, which contain different foramt of saving the signals and convert them to the new files with new structure tha is just one column (need to edit this sentence).
-
 # Metadata file
 
 The information of each recording and subject is gathered in a metadata file as a sheet, such as in Microsoft Office Excel format. Each row presents one of our signals with the corresponding filename PIDxxxx_SIDxxxxx and the columns gather the overall information of the subject and the recorded signal.
@@ -87,6 +85,28 @@ StimPulseDuaration_us : If stimulation is on, this column indicates the stimulat
 
 
 # Converting old files to new ones; FileAdaptor.m
+
+The objective of this data management is to read the old files in the data base, which contain different format of saving the signals and convert them to a one-column .txt file:
+
+"Fs= " x
+
+V(1)
+
+V(2)
+
+V(3)
+
+V(4)
+
+.
+
+.
+
+.
+
+V(end)
+
+where x is the sampling frequency of the signal in Hz.
 
 All signal files are in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
 
