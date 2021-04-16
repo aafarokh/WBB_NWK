@@ -100,3 +100,40 @@ All signal files a re in .txt format, either the old or the new versions. The fi
 
 0.0012	  0.000000        0.89966      0.61035
 
+The first column contains the time in most of the cases and the other rwos contain the signals. The signals could be different types of the same subject, such as LFP and EMG or different channels of LFP recording etc. 
+
+Another format could be like this:
+
+    "INFORMATION"
+    
+    "Prova2.smr"
+    
+    ""
+    
+    ""
+    
+    "SUMMARY"
+    
+    "1"	"Waveform"	"untitled"	" volt"	256	255.754476	1	0
+    
+    "31"	"Marker"	"Keyboard"
+    
+    "CHANNEL"	"1"
+    
+    "Waveform"
+    
+    "No comment"
+    
+    "untitled"
+    
+    " volt"	256
+    
+    "START"	0.00000	0.00391
+    
+    -0.00565
+    
+    -0.01022
+    
+    -0.01175
+    
+    -0.01297
