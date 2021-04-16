@@ -1,4 +1,4 @@
-# WBB_NWK
+s# WBB_NWK
 
 # Introduction
 
@@ -134,7 +134,7 @@ Another format could be like this:
     
     -0.01297
 
-and many other formats. So far we have identified 13 types of recording formats. The matlab script FileAdaptor.m converts the old format filels for these 13 cases to the new file format such as below:
+and many other formats. So far we have identified 13 types of recording formats. The matlab script FileAdaptor.m reads the metadata file and converts the old format files for these 13 cases to the new file format such as below:
 
 "Fs= " 512
 
@@ -154,4 +154,4 @@ and many other formats. So far we have identified 13 types of recording formats.
 
 -0.374178  
 
-and names is by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. 
+and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. The new file will be saved in the desired destination. 
