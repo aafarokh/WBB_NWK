@@ -156,4 +156,4 @@ and many other formats. So far we have identified 13 types of recording formats.
 
 and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. The new file will be saved in the desired destination. The frist row indicates that the sampling frequency (Fs) is 512 Hz, and the rest of the rows contain the signal values at each time sample.
 
-#Creat .json from the new files
+# Creat .json from the new files
