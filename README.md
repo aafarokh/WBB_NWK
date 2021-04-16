@@ -88,7 +88,7 @@ StimPulseDuaration_us : If stimulation is on, this column indicates the stimulat
 
 # Converting old files to new ones; FileAdopter.m
 
-All signal files a re in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
+All signal files are in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
 
     "Time"	"31 Keyboard"	"2 untitled"	"1 untitled"
     0.0000	 0.000000
