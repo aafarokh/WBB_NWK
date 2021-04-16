@@ -183,3 +183,11 @@ In some cases the gain of the signal i.e. the value that the recording device ha
 GainEstimator.m reads the metadata file and wherever that the gain was not given, tries to estimate a gain based on the SignalType and writes it to the metadata sheet and save.
 
 # Creat .json from the new files
+
+# Clean up the data set; FileCleaner.m
+
+There where some files in the data base with no given Fs and since this property is essential for any kind of data analysis, one might want to keep only the signals with given Fs. The other essnetial property of the signal that is required for data analysis is the SignalType, which indicates if it is LFP, EEG or any other type of biosignals.
+
+In this regard, FileCleaner.m reads the metadata file, identifies those files that have at least both Fs and SignalType reported and save them in a new folder called Clean.
+
+
