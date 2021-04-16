@@ -133,3 +133,25 @@ Another format could be like this:
     -0.01175
     
     -0.01297
+
+and many other formats. So far we have identified 13 types of recording formats. The matlab script FileAdaptor.m converts the old format filels for these 13 cases to the new file format such as below:
+
+"Fs= " 512
+
+1.928736
+
+-0.182643
+
+0.024379
+
+1.283741
+
+.
+
+.
+
+.
+
+-0.374178  
+
+and names is by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. 
