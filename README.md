@@ -1,4 +1,4 @@
-s# WBB_NWK
+# WBB_NWK
 
 # Introduction
 
