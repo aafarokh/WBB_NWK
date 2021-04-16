@@ -86,4 +86,17 @@ StimAmp : If stimulation is on, this column indicates the stimulation amplitude 
 StimPulseDuaration_us : If stimulation is on, this column indicates the stimulation pulse duration in microseconds. 
 
 
+# Converting old files to new files
+
+All signal files a re in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
+
+"Time"	"31 Keyboard"	"2 untitled"	"1 untitled"
+
+0.0000	 0.000000
+
+0.0004	 0.000000        0.62805      0.88745
+
+0.0008	 0.000000        1.20544      0.90698
+
+0.0012	 0.000000        0.89966      0.61035
 
