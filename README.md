@@ -86,7 +86,7 @@ StimAmp : If stimulation is on, this column indicates the stimulation amplitude 
 StimPulseDuaration_us : If stimulation is on, this column indicates the stimulation pulse duration in microseconds. 
 
 
-# Converting old files to new files
+# Converting old files to new ones; FileAdopter.m
 
 All signal files a re in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
 
@@ -154,4 +154,4 @@ and many other formats. So far we have identified 13 types of recording formats.
 
 -0.374178  
 
-and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. The new file will be saved in the desired destination. 
+and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. The new file will be saved in the desired destination. The frist row indicates that the sampling frequency (Fs) is 512 Hz, and the rest of the rows contain the signal values at each time sample.
