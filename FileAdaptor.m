@@ -1,22 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FileAdaptor.m reads the metadata file and converts the old format
+% files for 13 different cases to the new file format such as below:
+% "Fs= " 512
+% 1.928736
+% -0.182643
+% 0.024379
+% 1.283741
+% .
+% .
+% .
+% -0.374178
+% and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information 
+% about the signal and subject can be retrieved from the metadata file. 
+% The new file will be saved in the desired destination. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This code is written by AmirAli Farokhniaee, Ph.D. and can be found at:
+% https://github.com/aafarokh/WBB_NWK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 tic
 clearvars
+%%%choose which sheet of the metadata file to read:
 % selectsheet = 'PD_Basal';
 selectsheet = 'PD_MED_DBS';
 MT=readtable('C:\Users\amirali.farokhniaee\Desktop\ProcessingSignals\Metadata.xlsx','Sheet',selectsheet);
 new_filepath=['C:\Users\amirali.farokhniaee\Desktop\Processed_Signals\',selectsheet,'\'];
-
+%%%In case of starting from the last file to continue the conversion we need these three lines:
 xx=dir(new_filepath);   %Go to the new directory to find the last file
 cc=xx(end).name;        %Find the name of the last file in the new folder
 lastone=str2double(cc(12:end-4)); %Convert it to the row number in MT
 
 %%%%Uncomment the line below for the total files evaluation
-%     for i=1:size(MT,1)
 for i=1:size(MT,1)
     %%%Uncomment the first two lines below for the selceted files evaluation
     %     for i=223:246
     
-    %%%%Uncomment the first two lines below for new files evaluation starting
-    %%%%from the last converted file in the folder
+    %%%Uncomment the first two lines below for new files evaluation starting
+    %%%from the last converted file in the folder
     %     for i=lastone+1:size(MT,1)
     
     %%%The loops starting above share the text below anyways:
