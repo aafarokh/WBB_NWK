@@ -106,7 +106,7 @@ V(4)
 
 V(end)
 
-where x is the sampling frequency of the signal in Hz.
+where x is the sampling frequency of the signal in Hz and V is the value of the signal at a given time sample.
 
 All signal files are in .txt format, either the old or the new versions. The files that contain different signals from different subjects in the old format could have different rows and columns such as:
 
@@ -175,5 +175,11 @@ and many other formats. So far we have identified 13 types of recording formats.
 -0.374178  
 
 and names it by the unique PIDxxxx_SIDxxxxx ID so that all the information about the signal and subject can be retrieved from the metadata file. The new file will be saved in the desired destination. The frist row indicates that the sampling frequency (Fs) is 512 Hz, and the rest of the rows contain the signal values at each time sample.
+
+# Estimate the signal gain; GainEstimator.m
+
+In some cases the gain of the signal i.e. the value that the recording device has used to record the signal was not known. However, we know that for example deviding the value of the signal by gain for LFPs should be in microvolts order of magnitude. Also in some cases it can be guessed by other existing values of the same subject. 
+
+GainEstimator.m reads the metadata file and wherever that the gain was not given, tries to estimate a gain based on the SignalType and writes it to the metadata sheet and save.
 
 # Creat .json from the new files
