@@ -8,9 +8,11 @@ The matlab codes are applied on part of the WebBioBank (WBB) developed by Newron
 
 A unique pateint ID (PID) is given to each patient name. Each signal is labeled by a signal ID (SID) that is unique. At the end, each old file is named by combining PID and SID so that the new file name is in the format of PIDxxxx_SIDxxxxx where x is an integer. 
 
+The objective of this data management is to read the old files in the data base, which contain different foramt of saving the signals and convert them to the new files with new structure tha is just one column (need to edit this sentence).
+
 # Metadata file
 
-The information of each recording is gathered in a metadata file as a sheet, such as in Microsoft Office Excel format. More detail of each signal file is stored in the metadata file, where each row presents one of our signals with the corresponding filename PIDxxxx_SIDxxxxx. 
+The information of each recording and subject is gathered in a metadata file as a sheet, such as in Microsoft Office Excel format. Each row presents one of our signals with the corresponding filename PIDxxxx_SIDxxxxx and the columns gather the overall information of the subject and the recorded signal.
 
 This is a part of the metadata file:
  ![metadata](https://user-images.githubusercontent.com/39968388/114931931-308f0000-9e37-11eb-83d5-0162aee3c591.png)
@@ -23,65 +25,65 @@ PatientID : The unique ID for each patient that is chosed arbitrarily, howver re
 
 SignalID : The unique ID of each signal, e.g. SID00129
 
-SourceFile
+SourceFile : The name of the old file in the data base.
 
-FileLocation
+FileLocation : The location of the old file in the data base.
 
-SubjectType
+SubjectType : Shows the type of the subject that the signals are recorded from e.g. patient or animal etc.
 
-SubjectName
+SubjectName : Name of the subject, in case of patients it is the name of the patient. 
 
-SubjectGender
+SubjectGender : The gender of the subject
 
-SubjectDoB
+SubjectDoB : Subject date of birth
 
-SubjectCondition
+SubjectCondition : The subject's pathalogy, e.g. PD
 
-SignalType
+SignalType : The type of signal such as LFP, EEG, EMG etc.
 
-SignalContent
+SignalContent : It identifies what type of time series the data is, time series or spectral content etc. 
 
-Activity
+Activity : The tyoe of sctivity of the subject i.e. rest, move, open eyes, closed eyes etc.
 
-BodySite
+BodySite : The place in the body where the signal is recorded from
 
-Channel
+Channel : Indicates the channel of the recording electrode
 
-Medication
+Medication : ON/Off; If the subject was under medication during the recording or not
 
-Stimulation
+Stimulation : ON/Off; If the subject was under stimulation during the recording or not
 
-SignalUnit
+SignalUnit : Unit of the signal e.g. microvolts, milivolts etc.
 
-Number_Column_SourceFile
+Number_Column_SourceFile : This collumn is used for the data conversion code and mentiones the column in the old file where the new file is constructed on
 
-SignalFs
+SignalFs : Samplig frequency of the signal
 
-SignalGain
+SignalGain : Gain of the signal
 
-EstimatedGain
+EstimatedGain : In case the gain was not reported in the old file and corresponding data base, we estimated the gain by other evidences (see section ... below) using matlab code ... .
 
-SignalBandWidth
+SignalBandWidth : Bandwidth of the recorded signal
 
-Notch
+Notch : In case notch filter was used on the original signal or not
 
-ReecordingDate
+ReecordingDate : Date of the signal recording
 
-RecordingHour
+RecordingHour : Hour of the signal recording
+ 
+SignalDuration_s : Duration of the signal in seconds.
 
-SignalDuration_s
+Comments : Any comments needed to mention.
 
-Comments
+LinkPaper : Mentions the paper where the data has been used/analyzed etc. 
 
-LinkPaper
+BackupFolder : The folder where the backup of the old signal exists
 
-BackupFolder
+StimFreq : If stimulation is on, this column indicates the stimulation frequency in Hz
 
-StimFreq
+StimAmp : If stimulation is on, this column indicates the stimulation amplitude in microampers
 
-StimAmp
-
-StimPulseDuaration_us
+StimPulseDuaration_us : If stimulation is on, this column indicates the stimulation pulse duration in microseconds. 
 
 
 
