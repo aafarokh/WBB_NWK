@@ -188,6 +188,11 @@ For web applications such as WBB, it is extremely handy to merge every signal wi
 
 The code JsonAdoptor.m is a script that megres these information and save each new signal in .json format in aprallel with .txt file that already exists. The code uses the function saveAsJSON.m written by ... from  .... (find the original file that I have used online). This code helps researchers and web developers along with bioengineers to save any signal in .txt. format along with its information as a .json file using matlab. 
 
+One output example looks like this:
+
+![json](https://user-images.githubusercontent.com/39968388/115113601-71982900-9f8b-11eb-8554-4c744e0d225c.png)
+
+
 # Clean up the data set; FileCleaner.m
 
 There where some files in the data base with no given Fs and since this property is essential for any kind of data analysis, one might want to keep only the signals with given Fs. The other essnetial property of the signal that is required for data analysis is the SignalType, which indicates if it is LFP, EEG or any other type of biosignals.
