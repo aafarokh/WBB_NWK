@@ -182,7 +182,11 @@ In some cases the gain of the signal i.e. the value that the recording device ha
 
 GainEstimator.m reads the metadata file and wherever that the gain was not given, tries to estimate a gain based on the SignalType and writes it to the metadata sheet and save.
 
-# Creat .json from the new files
+# Creat .json from the new files; JsonAdoptor.m
+
+For web applications such as WBB, it is extremely handy to merge every signal with the corresponding information from the metadata file in one single filein .json format. 
+
+The code JsonAdoptor.m is a script that megres these information and save each new signal in .json format in aprallel with .txt file that already exists. The code uses the function saveAsJSON.m written by ... from  .... (find the original file that I have used online). This code helps researchers and web developers along with bioengineers to save any signal in .txt. format along with its information as a .json file using matlab. 
 
 # Clean up the data set; FileCleaner.m
 
