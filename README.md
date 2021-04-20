@@ -209,7 +209,7 @@ The corresponding .json files will be saved in the new folder as well.
 
 We have categorized the signals on WBB based on two distinct classes.
 
-*Class 1 collects signals to different "Types":  
+* Class 1 collects signals to different "Types":  
 
                                                 LFP-EEG-EMG (SignalType)
                                                  |   
