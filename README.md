@@ -207,7 +207,9 @@ The corresponding .json files will be saved in the new folder as well.
 
 # Data Identification & Classification; Signal_identifier_classifier.m
 
-Class 1 collects signals to different "Types":  LFP-EEG-EMG (SignalType)
+Class 1 collects signals to different "Types":  
+
+                                                LFP-EEG-EMG (SignalType)
                                                  |   
                                                 ----------------------------(BodySite)                
                                                 |                          |
