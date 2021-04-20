@@ -13,9 +13,11 @@ A unique pateint ID (PID) is given to each patient name. Each signal is labeled 
 The information of each recording and subject is gathered in a metadata file as a sheet, such as in Microsoft Office Excel format. Each row presents one of our signals with the corresponding filename PIDxxxx_SIDxxxxx and the columns gather the overall information of the subject and the recorded signal.
 
 This is a part of the metadata file:
+
 ![metadata](https://user-images.githubusercontent.com/39968388/115378818-3dae4500-a1d1-11eb-92db-c38efe509403.png)
 
 and:
+
 ![metadata2](https://user-images.githubusercontent.com/39968388/115378856-4a329d80-a1d1-11eb-8e0f-1c6fdf2d9f67.png)
 
 
