@@ -236,4 +236,34 @@ The hierarchy of class-1 follows:
                                   
                                   SignalType-> BodySite-> Stimulation-> On or Off
                                                                    
-Part 1 of the code Signal_identifier_classifier.m construct folders based on class-1 algorithm and copy the files from the parent folder and pastes to the child folder.
+Part 1 of the code Signal_identifier_classifier.m constructs folders based on class-1 algorithm, copies the files from the parent folder and pastes to the child folder.
+
+* Class-2 collects signals to different "Patients": 
+
+                                                  name1-name2-..._nameN (SubjectName)
+                                                    |     |         |
+                                                    |  the same as name1
+                                                    |
+                                                ----------- (SignalType)
+                                                LFP-EEG-EMG
+                                                 |   
+                                              ---------------------------- (BodySite)               
+                                              |                          |
+                                             STN                        GPi  
+                                              |
+                                  -------------------- (Channel-Medication-Stimulation)
+                                  |        |         |       
+                                 Side     Med       DBS
+                                (L,R)  (on/off)  (on/off) 
+
+The hierarchy of class-2 follows: 
+
+                                  SubjectName-> SignalType-> BodySite-> Channel-> Right or Left
+                                  
+                                  SubjectName-> SignalType-> BodySite-> Medication-> On or Off
+                                  
+                                  SubjectName-> SignalType-> BodySite-> Stimulation-> On or Off         
+                                                                   
+Part 2 of the code Signal_identifier_classifier.m constructs folders based on class-2 algorithm, copies the files from the parent folder and pastes to the child folder.
+
+The code can be edited easily base don ones need and is written such that any other classification of interest could be added. 
