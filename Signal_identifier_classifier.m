@@ -99,10 +99,6 @@ if ~exist([filepath,'Types\LFP\STN\DBS\','Off'],'dir') %check if a folder exist 
 mkdir C:\Users\amirali.farokhniaee\Desktop\Processed_Signals\PD_Basal\Clean_PD_Basal\Types\LFP\STN\DBS Off
 end
 
-% xx=dir(filepath);   %Go to the new directory to find the last file
-%TO DO:(expand the line above to start from the last file I worked on)
-
-
 % for i=1
 for i=1:size(MT,1)
     disp(MT.SignalType{i})
