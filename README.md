@@ -205,3 +205,19 @@ There where some files in the data base with no given Fs and since this property
 In this regard, FileCleaner.m reads the metadata file, identifies those files that have at least both Fs and SignalType reported and save them in a new folder called Clean.
 The corresponding .json files will be saved in the new folder as well.
 
+# Data Identification & Classification; Signal_identifier_classifier.m
+
+Class 1 collects signals to different "Types":  LFP-EEG-EMG (SignalType)
+                                                 |   
+                                                ----------------------------(BodySite)                
+                                                |                          |
+                                               STN                        GPi  
+                                                |
+                                   ---------------------------- (SubjectGender-Medicatioin-SubjectDoB-Stimulation)
+                                   |          |       |       |
+                                  Gender     Med     Age     DBS
+                                  (M,F)    (on/off)   |    (on/off)
+                                                      |
+                             ---------------------------------------------------(age range)           
+                            (bleow30,30-40,40-50,50-60,60-70,70-80,80-90,above90)
+
