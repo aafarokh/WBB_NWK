@@ -226,7 +226,9 @@ We have categorized the signals on WBB based on two distinct classes.
                             (bleow30,30-40,40-50,50-60,60-70,70-80,80-90,above90)
 
 
-The hierarchy of class 1 follows: SignalType->BodySite->SubjectGender-> M or F
+The hierarchy of class 1 follows: 
+
+                                  SignalType->BodySite->SubjectGender-> M or F
                                   
                                   SignalType->BodySite->SubjectDoB->age range
                                   
