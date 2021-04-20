@@ -207,7 +207,9 @@ The corresponding .json files will be saved in the new folder as well.
 
 # Data Identification & Classification; Signal_identifier_classifier.m
 
-Class 1 collects signals to different "Types":  
+We have categorized the signals on WBB based on two distinct classes.
+
+*Class 1 collects signals to different "Types":  
 
                                                 LFP-EEG-EMG (SignalType)
                                                  |   
@@ -223,3 +225,10 @@ Class 1 collects signals to different "Types":
                              ---------------------------------------------------(age range)           
                             (bleow30,30-40,40-50,50-60,60-70,70-80,80-90,above90)
 
+
+The hierarchy of class1 follows: SignalType->BodySite->SubjectGender-> M or F
+                                 SignalType->BodySite->SubjectDoB->age range
+                                 SignalType->BodySite->Medication->On or Off
+                                 SignalType->BodySite->Stimulation->On or Off
+                                 
+Part 1 of the code Signal_identifier_classifier.m construct folders based on class1 algorithm and copy the files from the parent folder and saves in the child folder.
