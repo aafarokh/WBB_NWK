@@ -250,4 +250,4 @@ The hierarchy of class-2 follows:
                                                                    
 Part 2 of the code Signal_identifier_classifier.m constructs folders based on class-2 algorithm, copies the files from the parent folder and pastes to the child folder.
 
-The code can be edited easily based on ones need and is written such that any other classification of interest could be added. 
+The code can be edited easily based on one's need and is written such that any other classification of interest could be added. 
