@@ -127,37 +127,21 @@ The first column contains the time in most of the cases and the other rwos conta
 Another format could be like this:
 
     "INFORMATION"
-    
     "Prova2.smr"
-    
-    ""
-    
-    ""
-    
-    "SUMMARY"
-    
-    "1"	"Waveform"	"untitled"	" volt"	256	255.754476	1	0
-    
-    "31"	"Marker"	"Keyboard"
-    
-    "CHANNEL"	"1"
-    
-    "Waveform"
-    
-    "No comment"
-    
-    "untitled"
-    
-    " volt"	256
-    
-    "START"	0.00000	0.00391
-    
-    -0.00565
-    
-    -0.01022
-    
-    -0.01175
-    
+    ""    
+    ""    
+    "SUMMARY"    
+    "1"	"Waveform"	"untitled"	" volt"	256	255.754476	1	0    
+    "31"	"Marker"	"Keyboard"    
+    "CHANNEL"	"1"    
+    "Waveform"    
+    "No comment"    
+    "untitled"    
+    " volt"	256    
+    "START"	0.00000	0.00391   
+    -0.00565   
+    -0.01022   
+    -0.01175    
     -0.01297
 
 and many other formats. So far we have identified 13 types of recording formats. The matlab script FileAdaptor.m reads the metadata file and converts the old format files for these 13 cases to the new file format such as below:
