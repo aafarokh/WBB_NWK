@@ -172,6 +172,12 @@ In some cases the gain of the signal i.e. the value that the recording device ha
 
 GainEstimator.m reads the metadata file and wherever that the gain was not given, tries to estimate a gain based on the SignalType and writes it to the metadata sheet and save.
 
+# Evaluate the signal unit; SignalUnit_calc.m
+SignalUnit_calc.m calculates the unit of each signal summarized in the metadata file based on the given/estimated signal gain. The results will be written in the SignalUnit column of the metadata file for each corresponding signal and saved.
+
+# Evaluate signal durations; SignalDuration_calc.m
+SignalDuration_calc.m calculates the duration of each signal in the metadata file and finally adds them up to calculate the total recording time per sheet and overall.
+
 # Creat .json from the new files; JsonAdoptor.m
 
 For web applications such as WBB, it is extremely handy to merge every signal with the corresponding information from the metadata file in one single filein .json format. 
