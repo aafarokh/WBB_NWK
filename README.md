@@ -8,6 +8,39 @@ The matlab codes are applied on part of the WebBioBank (WBB) developed by Newron
 
 A unique pateint ID (PID) is given to each patient name. Each signal is labeled by a signal ID (SID) that is unique. At the end, each old file is named by combining PID and SID so that the new file name is in the format of PIDxxxx_SIDxxxxx where x is an integer. 
 
+In the next section the organization routine is presented step-by-step.
+
+# The cleaning pipeline and data organization routine
+
+In this section we summarize the data management routine that we have utilized on WBB dataset. The detailed explanation of each step follows in the next sections.
+One needs to follow these steps one after the other (unless otherwise is mentioned).
+
+1-	Enter the info in the metadata file as complete as possible by referring to the old format of the files and sparse information. 
+a) FileName: Add as many as the columns of the old file dictates. The old text file contains different columns. The person must open the old file and check how many of these columns are related to recorded signal at different channels. 
+b) If the recording date of the signal is missing, write down 00:00:00 in RecordingDate column. 
+c) The most important factors to keep the signals and provide analysis on them are sampling frequency (Fs) and type of the signal (SignalType). 
+d) By checking the names, the person needs to make sure if a subject name is not repeated in previous rows and sheets, otherwise the same PID should be used. 
+e) The columns called EstimatedGain, SignalDuration and SignalUnit should be left blank as they will be filled out later automatically by the Matlab scripts. 
+f) If stimulation is on, try to provide info for the last three columns of the sheets which are the stimulation frequency, amplitude and pulse width. 
+
+2-	Run FileAdaptor.m to create the new files. This code should be run once the FileName columns in the metadata file and their corresponding Fs are fixed. 
+
+3-	Run Gainestimator.m to estimate the missing gains in the metadata file.
+
+4-	Run SignalUnit_calc.m to evaluate signals units.
+
+5-	Run SignalDuration_calc.m to evaluate the duration of the signals in seconds.
+
+6-	Run JsonAdaptor.m to create corresponding json files for each new file. Note that this step can be run only if the previous steps were run already. Also note that this step can be skipped in this routine without a problem to the whole concept.
+
+7-	Run CleanUp.m to place the files with given Fs and SignalType in a subdirectory for further spectral and statistical analysis.
+
+8-	Run AutomatedDataCheck.m to make a folder for each sheet of the metadata file called Diagrams and plots the signal as a time series, computes its spectrogram and Power Spectral Density (PSD) and plot them in a figure specific to the signal.
+
+9-	Run Signal_identifier_classifier.m to classify signals under classes 1 and 2.
+
+10-	Run SingalsStatistics.m to evaluate different statistical aspects of WBB such as pie-plots distributions and box plots.
+
 # Metadata file
 
 The information of each recording and subject is gathered in a metadata file as a sheet, such as in Microsoft Office Excel format. Each row presents one of our signals with the corresponding filename PIDxxxx_SIDxxxxx and the columns gather the overall information of the subject and the recorded signal.
@@ -195,7 +228,7 @@ There where some files in the data base with no given Fs and since this property
 In this regard, FileCleaner.m reads the metadata file, identifies those files that have at least both Fs and SignalType reported and save them in a new folder called Clean.
 The corresponding .json files will be saved in the new folder as well.
 
-# Data Identification & Classification; Signal_identifier_classifier.m
+# Data Identification & Categorization; Signal_identifier_classifier.m
 
 We have categorized the signals on WBB based on two distinct classes.
 
@@ -257,3 +290,5 @@ The hierarchy of class-2 follows:
 Part 2 of the code Signal_identifier_classifier.m constructs folders based on class-2 algorithm, copies the files from the parent folder and pastes to the child folder.
 
 The code can be edited easily based on one's need and is written such that any other classification of interest could be added. 
+
+
