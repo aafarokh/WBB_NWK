@@ -155,6 +155,7 @@ All signal files are in .txt format, either the old or the new versions. The fil
     0.0008	 0.000000        1.20544       0.90698
     0.0012	 0.000000        0.89966       0.61035
 
+
 The first column contains the time in most of the cases and the other rwos contain the signals. The signals could be different types of the same subject, such as LFP and EMG or different channels of LFP recording etc. 
 
 Another format could be like this:
@@ -291,4 +292,7 @@ Part 2 of the code Signal_identifier_classifier.m constructs folders based on cl
 
 The code can be edited easily based on one's need and is written such that any other classification of interest could be added. 
 
+# Run some statistics using SignalsStatistics.m
 
+SignalsStatistics.m computes the distribution of gender, age range, signal type etc. among the signals in the data bank.
+The results will be shown in differnet pie diagrams and box plots.
