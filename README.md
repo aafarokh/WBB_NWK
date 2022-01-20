@@ -33,7 +33,7 @@ f) If stimulation is on, try to provide info for the last three columns of the s
 
 6-	Run JsonAdaptor.m to create corresponding json files for each new file. Note that this step can be run only if the previous steps were run already. Also note that this step can be skipped in this routine without a problem to the whole concept.
 
-7-	Run CleanUp.m to place the files with given Fs and SignalType in a subdirectory for further spectral and statistical analysis.
+7-	Run FileCleaner.m to place the files with given Fs and SignalType in a subdirectory for further spectral and statistical analysis.
 
 8-	Run AutomatedDataCheck.m to make a folder for each sheet of the metadata file called Diagrams and plots the signal as a time series, computes its spectrogram and Power Spectral Density (PSD) and plot them in a figure specific to the signal.
 
